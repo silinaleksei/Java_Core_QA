@@ -13,7 +13,8 @@ public class AccuWeather {
         HttpUrl url = new HttpUrl.Builder()
                 .scheme("http")
                 .host("dataservice.accuweather.com")
-                .addPathSegments("forecasts/v1/daily/5day/295212")
+                .addPathSegments("forecasts/v1/daily/5day/295212") // 5 дней
+                //.addPathSegments("forecasts/v1/daily/1day/295212") // 1 день
                 .addQueryParameter("apikey", "XcBpOGA0G2Lnwrhh7KCJyPnji0aml6Kj")
                 .addQueryParameter("language", "ru-ru")
                 .addQueryParameter("details", "false")

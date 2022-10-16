@@ -39,7 +39,7 @@ public class FileData {
     public static void writer() throws IOException {
         try (FileWriter writer = new FileWriter("src/lesson5/file.csv")) {
             writer.write("value1" + ";" + "value2"
-                    + ";" + "value3" + ";" + System.getProperty("line.separator"));
+                    + ";" + "value3" + ";" + System.getProperty("line.separator")); // System.getProperty("line.separator" == '\n' -перенос строки
             for (TableData tableData : tableDataArrayList) {
                 writer.write(tableData.getValue1() + ";" + tableData.getValue2()
                         + ";" + tableData.getValue3() + ";" + System.getProperty("line.separator"));
@@ -65,6 +65,7 @@ public class FileData {
                 data[i][j] = Integer.parseInt(arrayListData.get(i).get(j));
             }
         }
+        System.out.println(arrayListData);
         appData.setData(data);
         return appData;
     }
